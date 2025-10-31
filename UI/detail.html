@@ -1,0 +1,52 @@
+<!-- detail.html -->
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Öğrenci Detayları</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; font-family:'Inter',sans-serif; }
+    body { display:flex; min-height:100vh; background:#f5f7fa; color:#212529; }
+    aside { width:240px; background:#212529; color:#fff; padding:1.5rem; display:flex; flex-direction:column; }
+    .logo { font-size:1.4rem; font-weight:600; margin-bottom:2rem; }
+    nav a { color:#adb5bd; text-decoration:none; padding:.75rem; border-radius:.5rem; display:block; margin-bottom:.5rem; transition:background .2s; }
+    nav a:hover, nav a.active { background:#343a40; color:#fff; }
+    main { flex:1; padding:2rem; }
+    header { display:flex; justify-content:space-between; align-items:center; margin-bottom:2rem; }
+    h1 { font-size:1.8rem; font-weight:600; }
+    .btn-primary { background:#0d6efd; color:#fff; padding:.5rem 1rem; border:none; border-radius:.5rem; cursor:pointer; }
+    table { width:100%; max-width:600px; border-collapse:collapse; background:#fff; border-radius:.75rem; overflow:hidden; box-shadow:0 2px 6px rgba(0,0,0,0.05); }
+    th, td { padding:0.75rem 1rem; text-align:left; vertical-align:top; }
+    th { width:40%; background:#f1f3f5; font-weight:600; }
+    tr + tr td { border-top:1px solid #e9ecef; }
+  </style>
+</head>
+<body>
+  <aside>
+    <div class="logo">ÖğrenciYS</div>
+    <nav>
+      <a href="students.html">Öğrenciler</a>
+      <a href="teachers.html">Öğretmenler</a>
+      <a href="courses.html">Dersler</a>
+    </nav>
+  </aside>
+
+  <main>
+    <header>
+      <h1 id="studentNameHeading">Öğrenci Detayları</h1>
+      <button class="btn-primary" onclick="location.href='students.html'">Geri Dön</button>
+    </header>
+
+    <section>
+      <table>
+        <tbody id="detailTableBody"><!-- JS ile doldurulacak --></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="javascript.js"></script>
+</body>
+</html>
